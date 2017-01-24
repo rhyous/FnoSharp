@@ -66,6 +66,7 @@
     <Compile Include="Builder\EntitlementLineItemBuilder.cs" />
     <Compile Include="Builder\LicenseModelBuilder.cs" />
     <Compile Include="Builder\MaintenanceLineItemBuilder.cs" />
+    <Compile Include="Builder\OrganizationBuilder.cs" />
     <Compile Include="Builder\ProductBuilder.cs" />
     <Compile Include="Builder\SimpleEntitlementBuilder.cs" />
     <Compile Include="Model\ObservableRangeCollection.cs" />
