@@ -8,7 +8,7 @@
             set { Object.name = value; }
         }
         
-        public string DisplayName
+        public string Name
         {
             get { return Object.displayName; }
             set { Object.displayName = value; }
