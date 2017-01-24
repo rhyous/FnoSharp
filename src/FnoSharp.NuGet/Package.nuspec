@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>FnoSharp.NuGet</id>
+    <version>1.0.0</version>
+    <title>FnoSharp </title>
+    <authors>Jared Barneck</authors>
+    <owners></owners>
+    <description>A project for interacting with Flexera webservices using C#.</description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>A project that wraps Flexera webservices in simple to use C# functionality.</summary>
+    <language>en-US</language>
+    <projectUrl>https://nuget.org/packages/FnoSharp.NuGet</projectUrl>
+    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
+    <copyright>Copyright Rhyous 2017</copyright>
+    <dependencies>
+        <group targetFramework="net45-full">
+          <dependency id="log4net" version="2.0.7.0" />
+        </group>
+    </dependencies>
+    <references></references>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="lib\" target="lib" />
+    <file src="tools\" target="tools" />
+    <file src="content\" target="content" />
+  </files>
+</package>
