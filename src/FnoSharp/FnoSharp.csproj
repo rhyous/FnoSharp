@@ -41,8 +41,8 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -67,9 +67,11 @@
     <Compile Include="Builder\LicenseModelBuilder.cs" />
     <Compile Include="Builder\MaintenanceLineItemBuilder.cs" />
     <Compile Include="Builder\OrganizationBuilder.cs" />
+    <Compile Include="Builder\SuiteBuilder.cs" />
     <Compile Include="Builder\ProductBuilder.cs" />
     <Compile Include="Builder\SimpleEntitlementBuilder.cs" />
     <Compile Include="Model\ObservableRangeCollection.cs" />
+    <Compile Include="Model\SuiteProductCollection.cs" />
     <Compile Include="Model\Timeout.cs" />
     <Compile Include="WebReference\FnoSharpReference.cs" />
     <Compile Include="WebReference\Partials\ProductPackagingService.cs" />
@@ -97,15 +99,4 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-  </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

@@ -34,5 +34,24 @@ namespace FnoSharp
         {
             return createProduct(new[] { product });
         }
+
+        public deleteProductResponseType DeleteProducts(IEnumerable<deleteProductDataType> products)
+        {
+            var prodStates = products.Select(p => new productStateDataType { stateToSet = StateType.DRAFT, productIdentifier = p.productIdentifier });
+            var changeStateResponse = setProductState(prodStates.ToArray());
+            if (changeStateResponse.statusInfo.status == StatusType.FAILURE)
+                return new deleteProductResponseType { statusInfo = changeStateResponse.statusInfo };
+            var prodsToDelete = products.Select(p => new deleteProductDataType { productIdentifier = p.productIdentifier }).ToList();
+            if (changeStateResponse.statusInfo.status == StatusType.FAILURE)
+            {
+                foreach (var item in changeStateResponse.failedData)
+                {
+                    prodsToDelete.RemoveAll(p => p.productIdentifier.primaryKeys.name == item.product.productIdentifier.primaryKeys.name
+                                              && p.productIdentifier.primaryKeys.version == item.product.productIdentifier.primaryKeys.version);
+                }
+            }
+            return deleteProduct(prodsToDelete.ToArray());
+
+        }
     }
 }
